@@ -406,11 +406,11 @@ XWikiMobile.prototype.toggleSideMenu = function() {
     if ($("#menu").hasClass("on")) {
      $.ui.toggleSideMenu(false);
      // make sure the page browser makes room for the menu
-     pageBrowser.toggleSideMenu(false);
+     childBrowser.toggleSideMenu(false);
     } else {
      $.ui.toggleSideMenu(true);
      // make sure the page browser makes room for the menu
-     pageBrowser.toggleSideMenu(true);
+     childBrowser.toggleSideMenu(true);
     }
 }
 

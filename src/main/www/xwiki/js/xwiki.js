@@ -154,9 +154,14 @@ function initXMobile() {
                               
                               // page browser is currently only supported on iOS
                               // without it it will fallback to the iframe page browser
-                              if (withPageBrowser && device.platform=="iOS") {
-                              pageBrowser = window.plugins.pageBrowser;
-                              }                              
+//                              if (withPageBrowser && device.platform=="iOS") {
+//                              pageBrowser = window.plugins.pageBrowser;
+//                              }                              
+                              if (withPageBrowser && ( device.platform=="iOS" || device.platform=='Android')) {
+                            	  
+                            	  childBrowser = window.plugins.childBrowser;
+                            	  
+                              }
                               }, false);
 }
 

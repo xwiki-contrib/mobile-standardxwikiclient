@@ -163,7 +163,7 @@ NetworkQueue.prototype.nextRequest = function() {
                      // we have been logged
                    console.log("User has been logged out (detected using XWiki-User header) " + xuser + " XWiki." + nextReq.service.username);
                    nextReq.service.setLoginStatus("failed");
-                   alert($.i18n.map["login.disconnected"] + " " + nextReq.service.name);
+//                   alert($.i18n.map["login.disconnected"] + " " + nextReq.service.name);
                    }
                    
                    console.log("AJAX done exit " + nextReqName + " code: " + nextReq.resultCode);
@@ -190,7 +190,7 @@ NetworkQueue.prototype.nextRequest = function() {
                     alert($.i18n.prop("login.failed",nextReq.service.name))
                    } else {
                     nextReq.service.setLoginStatus("failed");
-                    alert($.i18n.map["login.disconnected"] + " " + nextReq.service.name);
+//                    alert($.i18n.map["login.disconnected"] + " " + nextReq.service.name);
                    }
                    }
                    
