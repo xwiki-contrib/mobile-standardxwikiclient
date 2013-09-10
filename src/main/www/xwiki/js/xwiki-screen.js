@@ -54,8 +54,9 @@ function XWikiScreen(options) {
 XWikiScreen.prototype.showScreen = function() {
     // force closing of page browser
     // this only has effect with the native pageBrowser
-    if (window.pageBrowser)
-        window.pageBrowser.close();
+	if (window.pageBrowser){
+   	window.pageBrowser.close();
+   }
     
     var title = $.i18n.map[this.name + ".title"];
     if (title==undefined)
@@ -963,7 +964,6 @@ XWikiMobile.prototype.addDefaultScreens = function() {
             content = html
         }
         console.log("PAGE HEADER: " + header);
-        // console.log("PAGE CONTENT: " + content);
         pageBrowser.setPageContent(header, content);
     }
     
