@@ -54,8 +54,8 @@ function XWikiScreen(options) {
 XWikiScreen.prototype.showScreen = function() {
     // force closing of page browser
     // this only has effect with the native pageBrowser
-	if (window.childBrowser){
-   	childBrowser.close();
+	if (window.pageBrowser){
+   	window.pageBrowser.close();
    }
     
     var title = $.i18n.map[this.name + ".title"];
@@ -964,15 +964,7 @@ XWikiMobile.prototype.addDefaultScreens = function() {
             content = html
         }
         console.log("PAGE HEADER: " + header);
-        // console.log("PAGE CONTENT: " + content);
-//        pageBrowser.setPageContent(header, content);
-//        var newcontent = "<html><body><div id='xwikipageheader'></div><div id='xwikipagecontent'><div class='box floatinginfobox'><strong>Contents</strong><ul><li><span class='wikilink'><a href='#HPublicMailingLists'>Public Mailing Lists</a></span></li><li><span class='wikilink'><a href='#HPrivateMailingLists'>Private Mailing Lists</a></span></li><li><span class='wikilink'><a href='#HForums'>Forums</a></span></li><li><span class='wikilink'><a href='#HArchives'>Archives</a></span></li><li><span class='wikilink'><a href='#HStatistics'>Statistics</a></span></li></ul></div></div>";
-//        
-//        newcontent +=  "</body></html>";
-//        console.log("NEW CONTENT: " + newcontent);
-//        cb = window.plugins.childBrowser;
-//        cb.showWebPage(newcontent);
-        childBrowser.setPageContent(header, content);
+        pageBrowser.setPageContent(header, content);
     }
     
     

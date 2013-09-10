@@ -159,7 +159,7 @@ function initXMobile() {
 //                              }                              
                               if (withPageBrowser && ( device.platform=="iOS" || device.platform=='Android')) {
                             	  
-                            	  childBrowser = window.plugins.childBrowser;
+                            	  pageBrowser = window.plugins.childBrowser;
                             	  
                               }
                               }, false);
